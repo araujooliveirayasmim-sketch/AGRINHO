@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazenda do Futuro - Agro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Cultivando o Amanhã</h1>
+        <p>Transforme sua propriedade em uma potência sustentável e lucrativa</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="card">
+            <h2>Por que mudar?</h2>
+            <p class="Sub-titulo">Clique nas práticas abaixo para ver os benefícios reais para o seu negócio:</p>
+            
+            <div class="abas-botoes">
+                <button class="aba-btn active" onclick="mudarAba('solo')">Conservação do Solo</button>
+                <button class="aba-btn" onclick="mudarAba('agua')">Gestão da Água</button>
+                <button class="aba-btn" onclick="mudarAba('energia')">Energia Limpa</button>
+            </div>
+
+            <div id="conteudo-aba" class="conteudo-aba">
+                <h3>Rotação de Culturas e Plantio Direto</h3>
+                <p>Evita a erosão, mantém os nutrientes na terra e reduz drasticamente a necessidade de fertilizantes químicos caros. Cuidar do solo é garantir o sustento das próximas gerações.</p>
+            </div>
+        </section>
+
+        <section class="card simulador">
+            <h2>Simulador: Diagnóstico de Sustentabilidade</h2>
+            <p>Ative as práticas que você deseja implementar na sua fazenda para ver o painel mudar:</p>
+            
+            <div class="opcoes-simulador">
+                <label class="switch-container">
+                    <input type="checkbox" class="pratica-check" value="25" onchange="atualizarSimulador()">
+                    <span class="slider"></span>
+                    Uso de Energia Solar
+                </label>
+
+                <label class="switch-container">
+                    <input type="checkbox" class="pragon-check" value="25" onchange="atualizarSimulador()">
+                    <span class="slider"></span>
+                    Irrigação Gota a Gota (Inteligente)
+                </label>
+
+                <label class="switch-container">
+                    <input type="checkbox" class="pratica-check" value="25" onchange="atualizarSimulador()">
+                    <span class="slider"></span>
+                    Reflorestamento de APPs
+                </label>
+
+                <label class="switch-container">
+                    <input type="checkbox" class="pratica-check" value="25" onchange="atualizarSimulador()">
+                    <span class="slider"></span>
+                    Adubação Orgânica / Compostagem
+                </label>
+            </div>
+
+            <div class="progresso-container">
+                <span id="status-texto">Sua fazenda está no modelo tradicional.</span>
+                <div class="barra-fundo">
+                    <div id="barra-progresso" class="barra-preenchimento">0%</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 AgroSustentável - O futuro da terra está em nossas mãos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
